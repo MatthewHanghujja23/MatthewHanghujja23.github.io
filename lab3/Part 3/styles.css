@@ -98,3 +98,57 @@ section h2 + p,
 section h3 + p {
   text-indent: 20px;
 }
+
+/* === Links === */
+a {
+  color: #a66;
+  text-decoration: underline;
+  outline: none;
+}
+
+a:visited {
+  color: #844;
+}
+
+a:hover,
+a:focus {
+  text-decoration: none;
+  color: #c44;
+}
+
+a:active {
+  background-color: #fceaea;
+  color: #000;
+  font-weight: bold;
+}
+
+/* Add external link icon */
+/* === Links === */
+a {
+  color: #a66;
+  text-decoration: underline;
+  outline: none;
+}
+
+a:visited {
+  color: #844;
+}
+
+a:hover,
+a:focus {
+  text-decoration: none;
+  color: #c44;
+}
+
+a:active {
+  background-color: #fceaea;
+  color: #000;
+  font-weight: bold;
+}
+
+/* Add external link icon */
+a[href^="http"]:after {
+  content: ' 🔗';
+  font-size: 0.8em;
+  vertical-align: top;
+}
