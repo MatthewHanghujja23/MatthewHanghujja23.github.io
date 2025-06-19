@@ -43,3 +43,28 @@ header, footer {
 }
 
 /* WRITE YOUR CODE BELOW HERE */
+@font-face {
+    font-family: 'Merriweather';
+    src: url('fonts/Merriweather-Regular.woff2') format('woff2'),
+         url('fonts/Merriweather-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;    
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('fonts/OpenSans-Bold.woff2') format('woff2'),
+         url('fonts/OpenSans-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;     
+}
+
+html {
+    font-size: 10px;  /* Site-wide font size */
+
+}
+
+body{
+    font-family: 'Merriweather', serif; /* Default font */
+    line-height:1.6; /* Line height */
+}
