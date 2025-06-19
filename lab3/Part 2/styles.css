@@ -5,7 +5,7 @@ html {
 /* Your CSS below here */
 .large-box {
     width: 200px;  /* Width of the box */
-    height: 150px; /* Height of the box */
+    height: 100px; /* Height of the box */
     margin: 0 auto; /* Centers the box horizontally */
     display: flex; 
     align-items: center;  /* Centers the text vertically */
@@ -16,7 +16,7 @@ html {
     text-shadow: 1px 1px 1px black; /* Subtle black shadow */
     border-radius: 8px;
     border: 1px solid #b30000; /* Slightly darker red than backgroung */
-
+    
     background-image: linear-gradient(
         to bottom right,
         rgba(0, 0, 0, 0) 0%,
