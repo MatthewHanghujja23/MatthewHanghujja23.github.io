@@ -104,7 +104,9 @@ class EvilCircle extends Shape {
         const distance = Math.sqrt(dx * dx + dy * dy);
 
         if (distance < this.size + ball.size) {
-          ball.color = this.color = randomRGB();
+          ball.exists = false;
+          count--;
+          para.textContent = "Ball count: " + count;
         }
       }
     }
@@ -124,8 +126,11 @@ while (balls.length < 25) {
     size
   );
   balls.push(ball);
+  count++;
+  para.textContent = "Ball count: " + count;
 }
 
+const evil = new EvilCircle(width / 2, height / 2);
 function loop() {
   ctx.fillStyle = "rgba(0, 0, 0, 0.25)";
   ctx.fillRect(0, 0, width, height);
