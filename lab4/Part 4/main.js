@@ -2,9 +2,8 @@
 
 const canvas = document.querySelector("canvas");
 const ctx = canvas.getContext("2d");
-
-const para = document.querySelector('p'); // reference to the paragraph
-let count = 0; // keeps track of balls
+const para = document.querySelector('p'); 
+let count = 0; 
 
 
 const width = (canvas.width = window.innerWidth);
@@ -39,7 +38,43 @@ class Ball extends Shape {
     this.size = size;
     this.exists = true;
   }
+
+  draw() {
+    ctx.beginPath();
+    ctx.fillStyle = this.color;
+    ctx.arc(this.x, this.y, this.size, 0, 2 * Math.PI);
+    ctx.fill();
+  }
+
+  update() {
+    if ((this.x + this.size) >= width || (this.x - this.size) <= 0) {
+      this.velX = -this.velX;
+    }
+
+    if ((this.y + this.size) >= height || (this.y - this.size) <= 0) {
+      this.velY = -this.velY;
+    }
+
+    this.x += this.velX;
+    this.y += this.velY;
+  }
+
+  collisionDetect() {
+    for (const otherBall of balls) {
+      if (!(this === otherBall) && otherBall.exists) {
+        const dx = this.x - otherBall.x;
+        const dy = this.y - otherBall.y;
+        const distance = Math.sqrt(dx * dx + dy * dy);
+
+        if (distance < this.size + otherBall.size) {
+          this.color = randomRGB();
+          otherBall.color = randomRGB();
+        }
+      }
+    }
+  }
 }
+
 //Evil Circle Class (extends Shape)  
 class EvilCircle extends Shape {
   constructor(x, y) {
@@ -67,9 +102,11 @@ class EvilCircle extends Shape {
 
   draw() {
     ctx.beginPath();
+    ctx.lineWidth = 3;
+    ctx.strokeStyle = this.color;
     ctx.fillStyle = this.color;
     ctx.arc(this.x, this.y, this.size, 0, 2 * Math.PI);
-    ctx.fill();
+    ctx.stroke();
   }
 
   checkBounds() {
@@ -107,11 +144,11 @@ class EvilCircle extends Shape {
         const dy = this.y - ball.y;
         const distance = Math.sqrt(dx * dx + dy * dy);
 
-        if (distance < this.size + ball.size) {
-          ball.exists = false;
-          count--;
-          para.textContent = "Ball count: " + count;
-        }
+       if (distance < this.size + ball.size) {
+        ball.exists = false;
+        count--;
+        para.textContent = "Ball count: " + count;
+       }
       }
     }
   }
@@ -135,6 +172,7 @@ while (balls.length < 25) {
 }
 
 const evil = new EvilCircle(width / 2, height / 2);
+
 function loop() {
   ctx.fillStyle = "rgba(0, 0, 0, 0.25)";
   ctx.fillRect(0, 0, width, height);

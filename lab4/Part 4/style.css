@@ -8,8 +8,16 @@ html {
 }
 
 body {
+  margin: 0;  
   overflow: hidden;
+  background-color: white;
+  color: white;
   height: inherit;
+}
+
+canvas {
+    display: block;
+    
 }
 
 h1 {
