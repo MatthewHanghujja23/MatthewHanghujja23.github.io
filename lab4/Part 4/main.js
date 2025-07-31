@@ -9,7 +9,7 @@ const height = (canvas.height = window.innerHeight);
 // function to generate random number
 
 function random(min, max) {
-  return Math.floor(Math.random() * (max - min + 1)) + min;
+  return Math.floor(Math.random() * (max - min )) + min;
 }
 
 // function to generate random color
@@ -18,6 +18,15 @@ function randomRGB() {
   return `rgb(${random(0, 255)},${random(0, 255)},${random(0, 255)})`;
 }
 
+// Shape Class
+class Shape {
+    constructor(x, y, velX, velY) {
+    this.x = x;
+    this.y = y;
+    this.velX = velX;
+    this.velY = velY;
+  }
+}
 // Ball Class
 class Ball {
     constructor(x, y, velX, velY, color, size) {
