@@ -3,6 +3,10 @@
 const canvas = document.querySelector("canvas");
 const ctx = canvas.getContext("2d");
 
+const para = document.querySelector('p'); // reference to the paragraph
+let count = 0; // keeps track of balls
+
+
 const width = (canvas.width = window.innerWidth);
 const height = (canvas.height = window.innerHeight);
 
