@@ -15,11 +15,14 @@ const insertX = ["Willy the Goblin", "Big Daddy", "Father Christmas"];
 const insertY = ["the soup kitchen", "Disneyland", "the White House"];
 const insertZ = ["spontaneously combusted", "melted into a puddle on the sidewalk", "turned into a slug and crawled away"];
 
+// EVENT LISTENER
 randomize.addEventListener('click', result);
 
+// FUNCTION TO BUILD AND DISPLAY THE STORY
 function result() {
   let newStory = storyText;
 
+  // Pick random items
   const xItem = randomValueFromArray(insertX);
   const yItem = randomValueFromArray(insertY);
   const zItem = randomValueFromArray(insertZ);
@@ -29,7 +32,7 @@ function result() {
   newStory = newStory.replace(':inserty:', yItem);
   newStory = newStory.replace(':insertz:', zItem);
 
-  // Replace Bob with custom name if provided
+  // Replace name if user entered one
   if (customName.value.trim() !== '') {
     const name = customName.value.trim();
     newStory = newStory.replace('Bob', name);
@@ -43,7 +46,7 @@ function result() {
     newStory = newStory.replace('94 fahrenheit', temperature);
   }
 
-  // Show the final story
+  // Display the final story
   story.textContent = newStory;
   story.style.visibility = 'visible';
 }
