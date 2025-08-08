@@ -17,7 +17,21 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Sonsie One', cursive;
- 
+  margin: 0.5em 0;
+}
+
+p {
+  margin: 1em 0;
+}
+
+a {
+  color: #1a73e8;
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  text-decoration: underline;
 }
 
 /* Screen recorder only */
