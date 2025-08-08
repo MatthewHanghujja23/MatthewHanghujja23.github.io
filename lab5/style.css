@@ -23,6 +23,15 @@ font[size="7"], font[size="6"], font[size="5"] {
   color: #2a2a2a;
 }
 
+/* Screen recorder only */
+.sr-only {
+   position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
 p, input, li, table, label {
   font-family: 'Open Sans Condensed', sans-serif;
   color: #2a2a2a;
