@@ -1,24 +1,21 @@
 /* || General setup */
 
+
+
 html {
   font-size: 10px;
-  
+  background-color: #dde;
+  font-family: 'Open Sans Condensed', sans-serif;
+  line-height: 1.6;
 }
 
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f5f5f5; /* content area is white */
-  color: #333;
   width: 80%;
   min-width: 1024px;
   margin: 0 auto;
-  padding: 0;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
 
-
-
-/* || Screen reader only */
+/* Screen reader only */
 .sr-only {
   position: absolute;
   left: -9999px;
@@ -66,21 +63,21 @@ p, li, table {
 
 /* || header layout */
 
-header {
-  background-color: #2a2a2a;
-  padding: 30px 0;
-  text-align: center;
+div[class="nav"], article, footer, .secondary {
+  background-color: white;
 }
 
-header font[size="7"] {
-  font-family: 'Brush Script MT', cursive;
-  font-size: 5rem;
-  text-shadow: 2px 2px 4px #999;
+article, footer, .secondary {
+  padding: 10px 30px;
+}
+
+article {
+  margin-right: 10px;
 }
 
 div[class="nav"] {
   height: 50px;
-  background-color: white;
+  background-color: ff80ff;
   display: flex;
   padding: 1% 0;
   margin-bottom: 10px;
@@ -133,33 +130,23 @@ div[class="nav"] .search {
   color: white;
 }
 
-
 /* || main layout */
 
 main {
   display: flex;
-  background-color: white;
-  padding: 20px;
-  gap: 30px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  
 }
 
 article {
-  flex: 3;
-  padding: 10px 30px;
-  margin-right: 10px;
+  flex: 5;
 }
 
 .secondary {
-  flex: 1;
-  padding: 10px 30px;
-  border-left: 1px solid #ccc;
+  flex: 2;
 }
 
 footer {
   margin-top: 10px;
-  padding: 10px 30px;
-  background-color: #eee;
 }
 
 /* Table styling */
@@ -206,13 +193,6 @@ audio {
 
 .show-hide {
   cursor: pointer;
-  text-align: center;
-  width: 150px;
-  background: #333;
-  border: 0;
-  color: white;
-  font-size: 1.6rem;
-  line-height: 32px;
 }
 
 .comments font[size="6"] {
@@ -243,20 +223,27 @@ audio {
   flex: 6;
 }
 
-.comment-form input, .comment-form label {
+.show-hide {
+  text-align: center;
+  width: 150px;
+}
+
+.comment-form input, .comment-form label, .show-hide {
   font-size: 1.6rem;
   line-height: 32px;
 }
 
-.comment-form input[type="submit"] {
-   width: 30%;
-  display: block;
-  margin: 0 auto;
+.comment-form input[type="submit"], .show-hide {
   background: #333;
   border: 0;
   color: white;
 }
 
+.comment-form input[type="submit"] {
+  width: 30%;
+  display: block;
+  margin: 0 auto;
+}
 
 .comment-container {
   margin-top: 0;
