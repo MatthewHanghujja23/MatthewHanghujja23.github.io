@@ -1,26 +1,23 @@
 /* || General setup */
 
-html, body {
-  margin: 0;
-  padding: 0;
-}
 
 html {
-  font-size: 10px;
-  background-color: #dde;
+  font-family: sans-serif;
+  line-height: 1.6;
 }
 
 body {
-  width: 80%;
-  min-width: 1024px;
-  margin: 0 auto;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  color: #2a2a2a;
 }
 
 /* || typography */
 
-font[size="7"], font[size="6"], font[size="5"] {
+h1, h2, h3, h4, h5, h6 {
   font-family: 'Sonsie One', cursive;
-  color: #2a2a2a;
+ 
 }
 
 /* Screen recorder only */
