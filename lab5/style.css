@@ -1,23 +1,22 @@
 /* || General setup */
 
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f2f2f2;
-  margin: 0;
-  padding: 0;
-  color: #333;
-}
-
 html {
   font-size: 10px;
-  background-color: #dde;
+  
 }
 
 body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5; /* content area is white */
+  color: #333;
   width: 80%;
   min-width: 1024px;
   margin: 0 auto;
+  padding: 0;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
+
+
 
 /* || Screen reader only */
 .sr-only {
@@ -81,7 +80,7 @@ header font[size="7"] {
 
 div[class="nav"] {
   height: 50px;
-  background-color: #ff80ff;
+  background-color: white;
   display: flex;
   padding: 1% 0;
   margin-bottom: 10px;
